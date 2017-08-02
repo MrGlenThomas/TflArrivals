@@ -1,0 +1,53 @@
+ol {
+    list-style-type: decimal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.liveBoard {
+    margin: 0;
+    color: #2D3039;
+}
+
+.liveBoard .liveBoardFeed {
+    margin: 0;
+    counter-reset: item;
+    background-image: url(data:image/gif;base64,R0lGODlhAwADAIAAAP////Dw8CH/C1hNUCBEYXRhWE1QPD94cGFja…0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQAAAAAACwAAAAAAwADAAACAwyOVwA7);
+}
+
+.liveBoard .liveBoardFeedItem {
+    position: relative;
+    padding: 8px 70px 8px 48px;
+    border-top: 1px solid #ccc;
+    min-height: 39px;
+}
+
+.liveBoardFeedItem span.trainDestination {
+    width: 100%;
+    margin-right: 5px;
+    float: left;
+    font-weight: bold;
+}
+
+.liveBoard .liveBoardRoute {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 38px;
+    height: 100%;
+    font-weight: bold;
+}
+
+.liveBoard .liveBoardEta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+
+span.overground, span.londonOverground, td.overground, td.londonOverground {
+    background: #e86a10;
+}

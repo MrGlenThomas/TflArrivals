@@ -1,0 +1,23 @@
+[
+  {
+    "path": "/",
+    "view": "./views/arrivals",
+    "chunk": "main",
+    "data": {
+      "arrivals": "GET https://api.tfl.gov.uk/StopPoint/910GCNNB/Arrivals"
+    }
+  },
+  {
+    "path": "/error",
+    "view": "./views/error",
+    "chunk": "main"
+  },
+  {
+    "path": "/about",
+    "view": "./views/about"
+  },
+  {
+    "path": "/tasks/:status(pending|completed)?",
+    "view": "./views/home"
+  }
+]

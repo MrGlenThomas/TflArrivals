@@ -1,0 +1,6 @@
+{
+  "name": "Arrivals",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Arrivals.js"
+}
