@@ -12,7 +12,7 @@ class Arrivals extends React.Component {
   };
 
   componentDidMount() {
-    document.title = title;
+    document.title = this.props.arrivals.length === 0 ? 'Unknown' : this.props.arrivals[0].stationName;
   }
 
   comparePredictions = (a, b) => {
@@ -27,7 +27,7 @@ class Arrivals extends React.Component {
 
   render() {
     return (
-      <Layout pageTitle={title}>
+      <Layout pageTitle={this.props.arrivals.length === 0 ? 'Unknown' : this.props.arrivals[0].stationName}>
         <h1 className="mdl-typography--title">Live arrivals at {new Date().toLocaleTimeString()}</h1>
         <div className={s.liveBoard}>
           <ol className={s.liveBoardFeed}>

@@ -24,9 +24,11 @@ const getSuggestions = (value) => {
 // input value for every given suggestion.
 const getSuggestionValue = suggestion => suggestion.name;
 
+const getRoute = param => `/arrivals/${param}`;
+
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
-  <Link className="mdl-navigation__link" to="/arrivals">{suggestion.name}</Link>
+  <Link className="mdl-navigation__link" to={getRoute(suggestion.id)}>{suggestion.name}</Link>
 );
 
 class StationSearch extends React.Component {

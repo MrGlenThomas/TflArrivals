@@ -42,6 +42,7 @@ function matchURI(route, path) {
 function resolve(routes, context) {
   for (const route of routes) {
     const params = matchURI(route, context.error ? '/error' : context.pathname);
+    console.log(params);
     const query = parse(context.search);
 
     if (params) {
@@ -57,6 +58,9 @@ function resolve(routes, context) {
             const method = request.substring(0, request.indexOf(' '));
             let url = request.substr(request.indexOf(' ') + 1); // /api/tasks/$id
             // TODO: Replace query parameters with actual values coming from `params`
+            Object.keys(params).forEach((k) => {
+              url = url.replace(`$${k}`, params[k]);
+            });
             Object.keys(query).forEach((k) => {
               url = url.replace(`${k}`, query[k]);
             });
