@@ -3,6 +3,8 @@ import Autosuggest from 'react-autosuggest';
 import Layout from '../../components/Layout';
 import Link from '../../components/Link';
 
+const pageTitle = 'Station search';
+
 // Teach Autosuggest how to calculate suggestions for any given input value.
 const getSuggestions = (value) => {
   const inputValue = value.trim().toLowerCase();
@@ -75,7 +77,7 @@ class StationSearch extends React.Component {
     };
 
     return (
-      <Layout>
+      <Layout pageTitle={pageTitle}>
         {/* <div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
           <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
             <i class="material-icons">search</i>

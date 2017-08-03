@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Header from './Header';
 import s from './Layout.css';
 
 class Layout extends React.Component {
+
+  static propTypes = {
+    pageTitle: PropTypes.string.isRequired,
+  };
 
   componentDidMount() {
     window.componentHandler.upgradeElement(this.root);
@@ -21,7 +25,7 @@ class Layout extends React.Component {
             <div className={s.container}>
               <h1 className={`mdl-typography--title ${s.tagline}`}>TFL Arrivals</h1>
               <p className={`mdl-typography--body-1 ${s.summary}`}>
-                Canonbury Rail Station
+                {this.props.pageTitle}
               </p>
             </div>
           </div>

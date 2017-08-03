@@ -1,6 +1,11 @@
 [
   {
     "path": "/",
+    "view": "./views/stationsearch",
+    "chunk": "main"
+  },
+  {
+    "path": "/arrivals",
     "view": "./views/arrivals",
     "chunk": "main",
     "data": {

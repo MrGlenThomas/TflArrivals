@@ -68,6 +68,7 @@
     "postcss-nesting": "^4.0.1",
     "postcss-selector-matches": "^3.0.1",
     "postcss-selector-not": "^3.0.1",
+    "react-autosuggest": "^9.3.2",
     "react-hot-loader": "^3.0.0-beta.2",
     "style-loader": "^0.18.1",
     "stylelint": "^7.10.1",

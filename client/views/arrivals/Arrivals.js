@@ -3,7 +3,7 @@ import * as moment from 'moment';
 import Layout from '../../components/Layout';
 import s from './Arrivals.css';
 
-const title = 'Canonbury Arrivals';
+const title = 'Canonbury Rail Station';
 
 class Arrivals extends React.Component {
 
@@ -15,9 +15,19 @@ class Arrivals extends React.Component {
     document.title = title;
   }
 
+  comparePredictions = (a, b) => {
+    if (a.timeToStation < b.timeToStation) {
+      return -1;
+    }
+    if (a.timeToStation > b.timeToStation) {
+      return 1;
+    }
+    return 0;
+  }
+
   render() {
     return (
-      <Layout>
+      <Layout pageTitle={title}>
         <h1 className="mdl-typography--title">Live arrivals at {new Date().toLocaleTimeString()}</h1>
         <div className={s.liveBoard}>
           <ol className={s.liveBoardFeed}>
@@ -32,16 +42,6 @@ class Arrivals extends React.Component {
         </div>
       </Layout>
     );
-  }
-
-  comparePredictions = (a, b) => {
-    if (a.timeToStation < b.timeToStation) {
-      return -1;
-    }
-    if (a.timeToStation > b.timeToStation) {
-      return 1;
-    }
-    return 0;
   }
 }
 
